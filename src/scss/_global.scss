@@ -1,0 +1,108 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body, html {
+  position: relative;
+  scroll-behavior: smooth;
+  height: unset;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  min-width: $min-width;
+  background-image: url('../img/bg4k-min.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 34px;
+}
+
+ul, li {
+  padding-inline-start: 0;
+  list-style-type: none;
+}
+
+a {
+  color: white;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.title {
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 64px;
+  line-height: 102px;
+  color: black;
+  margin-left: -90px;
+
+  span {
+    color: $color-symbols;
+  }
+}
+
+.layout {
+  width: $gridXL;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
+
+.hide {
+  height: 0 !important;
+  opacity: 0 !important;
+  margin: 0 !important;
+}
+
+@media(min-width: 320px) {
+  .layout {
+    width: $gridXS;
+  }
+}
+
+@media(min-width: 640px) {
+  .layout {
+    width: $gridSM;
+  }
+}
+
+@media(min-width: 768px) {
+  .layout {
+    width: $gridMD;
+  }
+}
+
+@media(min-width: 1024px) {
+  .layout {
+    width: $gridLG;
+  }
+}
+
+@media(min-width: 1440px) {
+  .layout {
+    width: $gridXL;
+    max-width: $max-width;
+  }
+}
+
+/*.container{
+  margin: 0 50px;
+}*/

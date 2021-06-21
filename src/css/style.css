@@ -1,0 +1,1055 @@
+@charset "UTF-8";
+/* Прелоадер */
+.loaded_hiding .preloader {
+  transition: 0.3s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }
+
+.loaded_hiding .preloader {
+  transition: 0.5s opacity;
+  opacity: 0; }
+
+.loaded .preloader {
+  display: none; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+body, html {
+  position: relative;
+  scroll-behavior: smooth;
+  height: unset; }
+
+body {
+  position: relative;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 320px;
+  background-image: url("../img/bg4k-min.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  overflow-x: hidden;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 34px; }
+
+ul, li {
+  padding-inline-start: 0;
+  list-style-type: none; }
+
+a {
+  color: white;
+  display: inline-block;
+  text-decoration: none; }
+
+.title {
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 64px;
+  line-height: 102px;
+  color: black;
+  margin-left: -90px; }
+  .title span {
+    color: #8031A7; }
+
+.layout {
+  width: 85%;
+  max-width: 1920px;
+  margin: 0 auto; }
+
+.mobile {
+  display: none; }
+
+.desktop {
+  display: block; }
+
+.hide {
+  height: 0 !important;
+  opacity: 0 !important;
+  margin: 0 !important; }
+
+@media (min-width: 320px) {
+  .layout {
+    width: 90%; } }
+
+@media (min-width: 640px) {
+  .layout {
+    width: 83.3%; } }
+
+@media (min-width: 768px) {
+  .layout {
+    width: 80%; } }
+
+@media (min-width: 1024px) {
+  .layout {
+    width: 85%; } }
+
+@media (min-width: 1440px) {
+  .layout {
+    width: 85%;
+    max-width: 1920px; } }
+
+/*.container{
+  margin: 0 50px;
+}*/
+.header-wrapper {
+  padding-top: 120px;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative; }
+  .header-wrapper .call-text {
+    flex-basis: 40%;
+    color: #8031A7; }
+  .header-wrapper .burger {
+    display: none; }
+  .header-wrapper .menu {
+    flex-basis: 60%; }
+    .header-wrapper .menu__list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; }
+    .header-wrapper .menu__link {
+      line-height: 22px;
+      letter-spacing: 0.1px;
+      transition: all .3s;
+      position: relative; }
+      .header-wrapper .menu__link:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 3px;
+        width: 0;
+        transition: all .5s;
+        background: linear-gradient(90deg, #9358B0 50%, rgba(94, 212, 238, 0.7) 74%);
+        bottom: -5px;
+        left: 0;
+        border-radius: 15px; }
+      .header-wrapper .menu__link:hover, .header-wrapper .menu__link:focus {
+        text-decoration: none;
+        font-weight: bold;
+        letter-spacing: 0;
+        color: white; }
+        .header-wrapper .menu__link:hover:before, .header-wrapper .menu__link:focus:before {
+          width: 100%; }
+
+.description {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 75px; }
+  .description__title {
+    margin-left: -110px;
+    flex-basis: 40%; }
+  .description__inner {
+    flex-basis: 60%; }
+    .description__inner .text {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 68px; }
+    .description__inner .date {
+      font-family: IBM Plex Mono, sans-serif;
+      font-size: 96px;
+      line-height: 125px; }
+
+.qualifying-round {
+  margin: 250px auto 215px; }
+  .qualifying-round__title {
+    margin-bottom: 70px; }
+  .qualifying-round__inner {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between; }
+    .qualifying-round__inner .date-block {
+      width: 49%;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      font-family: IBM Plex Mono, sans-serif;
+      font-size: 36px;
+      line-height: 47px; }
+      .qualifying-round__inner .date-block .month {
+        align-self: flex-end;
+        margin-left: 5px; }
+      .qualifying-round__inner .date-block .text {
+        margin-top: 40px; }
+        .qualifying-round__inner .date-block .text #geo {
+          position: relative;
+          padding-left: 30px; }
+          .qualifying-round__inner .date-block .text #geo:before {
+            position: absolute;
+            content: url("../img/icon-geoplace.svg");
+            left: 5px;
+            top: -3px; }
+    .qualifying-round__inner .first-date {
+      margin-right: 20px; }
+      .qualifying-round__inner .first-date .text {
+        max-width: 360px; }
+
+.about__title {
+  margin-bottom: 55px; }
+
+.about__text, .about__wrapper {
+  opacity: 1;
+  transition: all .2s; }
+
+.about__text {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 68px;
+  color: black; }
+
+.about__wrapper {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 50px 0 70px; }
+  .about__wrapper .inner {
+    width: 47%; }
+    .about__wrapper .inner .subtitle {
+      font-family: IBM Plex Mono, sans-serif;
+      font-size: 36px;
+      line-height: 47px;
+      color: #8031A7;
+      margin-bottom: 30px; }
+    .about__wrapper .inner .subtext {
+      font-family: Montserrat, sans-serif;
+      font-size: 18px;
+      line-height: 34px;
+      color: black; }
+
+.about__registration {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 80px; }
+  .about__registration .registration-description-wrapper {
+    font-family: IBM Plex Mono, sans-serif;
+    font-size: 36px;
+    line-height: 47px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 440px;
+    max-width: 50%; }
+    .about__registration .registration-description-wrapper .text {
+      color: black;
+      margin-top: 115px; }
+    .about__registration .registration-description-wrapper .note {
+      color: #8031A7; }
+    .about__registration .registration-description-wrapper .reg-for-guests {
+      background-color: #8031A7;
+      color: white;
+      border: 2px solid transparent;
+      transition: .3s;
+      padding: 20px 30px;
+      margin-top: 30px;
+      text-align: center; }
+      .about__registration .registration-description-wrapper .reg-for-guests:hover {
+        color: #8031A7;
+        background-color: transparent;
+        border-color: #8031A7;
+        text-decoration: none; }
+  .about__registration .registration-form-wrapper {
+    max-width: 550px;
+    padding: 50px 30px;
+    background-color: white; }
+    .about__registration .registration-form-wrapper .form {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column; }
+      .about__registration .registration-form-wrapper .form .title-reg {
+        font-family: IBM Plex Mono, sans-serif;
+        font-size: 48px;
+        line-height: 50px;
+        color: #8031A7;
+        margin-bottom: 32px; }
+      .about__registration .registration-form-wrapper .form .fieldset {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; }
+      .about__registration .registration-form-wrapper .form .policy-wrapper {
+        color: black; }
+        .about__registration .registration-form-wrapper .form .policy-wrapper a {
+          color: #8031A7;
+          text-decoration: underline;
+          transition: all .3s; }
+          .about__registration .registration-form-wrapper .form .policy-wrapper a:hover, .about__registration .registration-form-wrapper .form .policy-wrapper a:focus {
+            text-decoration: none; }
+      .about__registration .registration-form-wrapper .form .field {
+        min-width: 490px;
+        min-height: 56px;
+        margin: 13px 0;
+        border: 1px solid #C4C4C4;
+        padding: 0 13px; }
+      .about__registration .registration-form-wrapper .form .button {
+        background-color: #8031A7;
+        color: white;
+        border: 2px solid transparent;
+        transition: all .3s; }
+        .about__registration .registration-form-wrapper .form .button:disabled {
+          opacity: .3; }
+        .about__registration .registration-form-wrapper .form .button:hover, .about__registration .registration-form-wrapper .form .button:focus {
+          color: #8031A7;
+          background: transparent;
+          border-color: #8031A7; }
+
+.about__sponsor .title-sponsor {
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 36px;
+  line-height: 47px;
+  color: #8031A7;
+  margin-bottom: 40px; }
+
+.about__sponsor .wrapper-sponsor {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between; }
+  .about__sponsor .wrapper-sponsor .text-sponsor {
+    color: black;
+    width: 45%; }
+    .about__sponsor .wrapper-sponsor .text-sponsor p a {
+      color: black;
+      text-decoration: underline;
+      transition: all .3s; }
+      .about__sponsor .wrapper-sponsor .text-sponsor p a:hover {
+        text-decoration: none; }
+    .about__sponsor .wrapper-sponsor .text-sponsor p + p {
+      margin-top: 40px; }
+
+.last-day-program {
+  margin-top: 140px;
+  margin-bottom: 130px; }
+  .last-day-program__wrapper {
+    margin-top: 60px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between; }
+    .last-day-program__wrapper .program-date {
+      width: 40%;
+      display: flex;
+      flex-wrap: wrap; }
+      .last-day-program__wrapper .program-date img {
+        width: 60%; }
+      .last-day-program__wrapper .program-date .month {
+        font-family: IBM Plex Mono, sans-serif;
+        font-size: 36px;
+        line-height: 47px;
+        align-self: flex-end;
+        margin-left: 20px; }
+      .last-day-program__wrapper .program-date .text {
+        font-family: Montserrat, sans-serif;
+        font-size: 24px;
+        line-height: 29px;
+        max-width: 330px;
+        margin-top: 30px; }
+    .last-day-program__wrapper .program-schedule {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      font-family: IBM Plex Mono, sans-serif;
+      font-size: 36px;
+      line-height: 68px;
+      color: #8031A7; }
+
+.moderators__wrapper {
+  margin-top: 60px;
+  margin-bottom: 140px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .moderators__wrapper .inner {
+    min-height: 500px;
+    width: 25%;
+    font-family: Montserrat, sans-serif;
+    font-size: 24px;
+    line-height: 29px; }
+    .moderators__wrapper .inner .photo {
+      margin-bottom: 30px;
+      transition: all .3s;
+      border-radius: 50%;
+      position: relative;
+      max-width: 280px;
+      min-height: 280px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain; }
+      .moderators__wrapper .inner .photo:hover {
+        cursor: pointer; }
+        .moderators__wrapper .inner .photo:hover:before {
+          position: absolute;
+          content: '';
+          background: linear-gradient(180deg, #8031A7 28.68%, #65D7E7 83.53%);
+          background-blend-mode: lighten;
+          top: 0;
+          left: 0;
+          width: 280px;
+          min-height: 280px;
+          border-radius: 50%;
+          opacity: .6;
+          z-index: 0; }
+    .moderators__wrapper .inner .name, .moderators__wrapper .inner .company {
+      color: black !important; }
+    .moderators__wrapper .inner .post {
+      color: #8031A7; }
+
+.contacts {
+  margin-bottom: 160px; }
+  .contacts__title {
+    margin-bottom: 130px; }
+  .contacts__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .contacts__wrapper .logo-img {
+      align-self: flex-start;
+      margin-bottom: 190px; }
+      .contacts__wrapper .logo-img path {
+        transition: all .5s; }
+      .contacts__wrapper .logo-img:hover path {
+        fill: #8031A7; }
+    .contacts__wrapper .social-group {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 50%; }
+      .contacts__wrapper .social-group a svg {
+        transition: all .5s;
+        transform: scale(1); }
+      .contacts__wrapper .social-group a path {
+        transition: all .5s; }
+      .contacts__wrapper .social-group a:hover svg {
+        transform: scale(1.1); }
+      .contacts__wrapper .social-group a:hover path {
+        fill: #8031A7; }
+    .contacts__wrapper .arrow-up {
+      align-self: flex-end;
+      margin-bottom: 75px; }
+
+.display.form-error {
+  display: block; }
+
+.form-error {
+  display: none;
+  position: relative;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid #f5c6cb;
+  border-radius: .25rem;
+  color: #721c24;
+  background-color: #f8d7da;
+  line-height: 1.2;
+  font-size: 14px;
+  width: 100%; }
+
+.form-success {
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  background-color: #d4edda; }
+
+.fieldset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; }
+  .fieldset .error {
+    border-color: red; }
+  .fieldset .valid {
+    border-color: green; }
+
+.privacy-page {
+  padding: 100px 0 60px; }
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1290px;
+  padding: 0 15px;
+  margin: 0 auto; }
+
+.title-section {
+  color: #232a46;
+  font-size: 47px;
+  font-weight: 900;
+  letter-spacing: 2.82px;
+  line-height: 1; }
+
+.privacy-page .privacy-list {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  padding: 25px;
+  margin-top: 40px; }
+
+.privacy-page h3 {
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: .06em;
+  color: #232a46;
+  margin-bottom: 20px;
+  margin-top: 40px; }
+
+.privacy-list p {
+  margin-bottom: 1em;
+  color: black; }
+
+.privacy-page a {
+  color: #e21a89; }
+
+@keyframes load {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+.loading {
+  position: relative; }
+  .loading #label {
+    content: url("../img/load-btn.png");
+    width: 35px;
+    height: 35px;
+    bottom: 23px;
+    position: absolute;
+    animation: load ease-in-out infinite 2s; }
+
+@media (max-width: 1920px) {
+  body {
+    background-image: url("../img/bg.jpg"); }
+  .qualifying-round__inner .date-block {
+    width: 50%; } }
+
+@media (max-width: 1600px) {
+  .last-day-program__wrapper .program-date .month {
+    margin-left: 5px; }
+  .last-day-program__wrapper .program-schedule {
+    width: 57%; } }
+
+@media (max-width: 1500px) {
+  .description__title img {
+    width: 110%; }
+  .description__inner {
+    flex-basis: 61%; }
+  .moderators__wrapper .inner {
+    min-height: 560px; } }
+
+@media (max-width: 1440px) {
+  .description__title img {
+    width: 100%; }
+  .description__title {
+    margin-left: -90px; }
+  .description__inner {
+    flex-basis: 63%; }
+  .qualifying-round__inner .date-block img {
+    width: 60%; }
+  .qualifying-round__inner .date-block {
+    width: 50%; }
+  .about__registration .registration-description-wrapper .text {
+    max-width: 590px; }
+  .last-day-program__wrapper .program-date img {
+    width: 60%; }
+  .last-day-program__wrapper .program-date {
+    width: 50%; }
+  .moderators__wrapper .inner {
+    width: 30%; }
+  .moderators__wrapper {
+    flex-wrap: wrap;
+    justify-content: space-around; }
+  .contacts {
+    margin-bottom: 100px; }
+  .contacts__wrapper .arrow-up {
+    margin-bottom: 15px; }
+  .header-wrapper {
+    padding-top: 80px; }
+  .last-day-program__wrapper {
+    margin-top: 100px; } }
+
+@media (max-width: 1440px) {
+  .description__inner {
+    flex-basis: 64%; }
+  .description__title img {
+    width: 96%; }
+  .last-day-program__wrapper {
+    margin-top: 100px;
+    flex-direction: column;
+    align-items: center; }
+  .last-day-program__wrapper .program-date .text, .last-day-program__wrapper .program-date .month {
+    color: #8031A7; }
+  .last-day-program__wrapper .program-date .text {
+    display: none; }
+  .last-day-program__wrapper .program-date {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: nowrap; }
+    .last-day-program__wrapper .program-date img {
+      display: none; }
+    .last-day-program__wrapper .program-date svg {
+      display: block; }
+      .last-day-program__wrapper .program-date svg path {
+        fill: #8031A7; }
+  .last-day-program__wrapper .program-schedule {
+    width: 100%;
+    margin-top: 60px; } }
+
+@media (max-width: 1366px) {
+  .description__title img {
+    width: 90%; }
+  .description__inner {
+    flex-basis: 60%; }
+  .description__inner .text {
+    font-size: 34px;
+    line-height: 60px; }
+  .description__inner .date {
+    font-size: 88px;
+    line-height: 110px; }
+  .qualifying-round__inner .date-block img {
+    width: 50%; }
+  .qualifying-round__inner .date-block {
+    width: 45%;
+    font-size: 32px;
+    line-height: 42px; }
+  .qualifying-round {
+    margin: 250px auto 300px; }
+  .about__registration .registration-description-wrapper .text {
+    max-width: 525px; }
+  .last-day-program__wrapper {
+    margin-top: 75px; } }
+
+@media (max-width: 1280px) {
+  .header-wrapper .menu {
+    flex-basis: 75%; }
+  .description__title {
+    margin-left: -70px; }
+  .description__inner {
+    flex-basis: 65%; }
+  .description__inner .text {
+    font-size: 32px;
+    line-height: 56px; }
+  .description__inner .date {
+    font-size: 82px;
+    line-height: 100px; }
+  .title {
+    font-size: 58px;
+    line-height: 92px;
+    margin-left: -70px; }
+  .about__text {
+    font-size: 32px;
+    line-height: 60px; }
+  .about__registration .registration-form-wrapper .form .title-reg {
+    font-size: 42px;
+    line-height: 46px; }
+  .about__registration .registration-description-wrapper {
+    font-size: 32px;
+    line-height: 42px; }
+  .about__registration .registration-description-wrapper .text {
+    max-width: 450px; }
+  .about__registration .registration-form-wrapper {
+    max-width: 500px;
+    padding: 40px 20px; }
+  .about__registration .registration-form-wrapper .form .field {
+    min-width: 460px; }
+  .last-day-program__wrapper .program-date {
+    padding-top: 50px; } }
+
+@media (max-width: 1250px) {
+  .header-wrapper .menu {
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    transition: all .4s;
+    padding-top: 25vh; }
+    .header-wrapper .menu__list {
+      flex-direction: column; }
+    .header-wrapper .menu .menu__item + .menu__item {
+      margin-top: 20px; }
+    .header-wrapper .menu__link {
+      color: #8031A7; }
+      .header-wrapper .menu__link:hover, .header-wrapper .menu__link:focus {
+        color: #8031A7; }
+  .header-wrapper .burger {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    z-index: 10; }
+    .header-wrapper .burger .burger-line {
+      width: 55px;
+      height: 3px;
+      background-color: black;
+      transition: all .3s; }
+    .header-wrapper .burger .first-line {
+      transform: rotate(0deg); }
+    .header-wrapper .burger .middle-line {
+      opacity: 1; }
+    .header-wrapper .burger .last-line {
+      transform: rotate(0deg); }
+  html.open {
+    overflow: hidden; }
+    html.open .header-wrapper .menu {
+      transform: translateX(-100%); }
+    html.open .header-wrapper .burger .burger-line {
+      position: absolute; }
+    html.open .header-wrapper .burger .first-line {
+      transform: rotate(45deg); }
+    html.open .header-wrapper .burger .middle-line {
+      opacity: 0; }
+    html.open .header-wrapper .burger .last-line {
+      transform: rotate(-45deg); } }
+
+@media (max-width: 1180px) {
+  .about__registration .registration-description-wrapper {
+    max-width: 40%; }
+  .about__registration .registration-form-wrapper {
+    max-width: 460px; }
+  .about__registration .registration-form-wrapper .form .field {
+    min-width: 400px; }
+  .about__registration .registration-description-wrapper img {
+    width: 90%; }
+  .about__registration .registration-description-wrapper {
+    margin-bottom: 30px; }
+  .about__registration .registration-form-wrapper .form {
+    padding: 0 10px; } }
+
+@media (max-width: 1071px) {
+  .title {
+    font-size: 56px; } }
+
+@media (max-width: 1024px) {
+  .mobile {
+    display: block; }
+  .desktop {
+    display: none; }
+  .description__title {
+    margin-left: 0;
+    flex-basis: 100%; }
+  .description__title img {
+    width: 100%; }
+  .description {
+    flex-direction: column;
+    align-items: center; }
+  .description__inner {
+    flex-basis: 100%;
+    margin-top: 40px; }
+  .description__inner .text {
+    font-size: 32px;
+    line-height: 56px;
+    color: #8031A7; }
+  .qualifying-round {
+    margin: 240px auto 250px; }
+  .title {
+    font-size: 58px;
+    line-height: 92px;
+    margin-left: -50px; }
+  .qualifying-round__inner {
+    flex-direction: column;
+    align-items: center; }
+  .qualifying-round__inner .date-block {
+    width: 70%;
+    margin-top: 40px; }
+  .qualifying-round__inner .date-block img {
+    width: 70%; }
+  .about__title {
+    position: relative; }
+    .about__title .rotate.arrow-down-about {
+      transform: rotate(180deg); }
+    .about__title .arrow-down-about {
+      transition: all .3s;
+      position: absolute;
+      content: url("../img/mobile-arrow-down.svg");
+      cursor: pointer;
+      right: 230px;
+      top: 35px;
+      z-index: 5; }
+  .about__text {
+    color: #8031A7; }
+  .about__registration {
+    flex-direction: column; }
+  .about__registration .registration-description-wrapper .text {
+    margin-top: 0;
+    max-width: 100%; }
+  .about__registration .registration-description-wrapper {
+    justify-content: space-evenly;
+    min-height: 350px;
+    max-width: 100%; }
+  .about__sponsor .wrapper-sponsor {
+    flex-direction: column;
+    justify-content: center; }
+  .about__sponsor .wrapper-sponsor .text-sponsor p + p {
+    margin-top: 20px; }
+  .about__sponsor .wrapper-sponsor .text-sponsor {
+    width: 100%; }
+  .about__sponsor .title-sponsor {
+    max-width: 245px;
+    position: relative; }
+    .about__sponsor .title-sponsor .rotate.arrow-down-sponsor {
+      transform: rotate(180deg); }
+    .about__sponsor .title-sponsor .arrow-down-sponsor {
+      transition: all .3s;
+      position: absolute;
+      content: url("../img/mobile-arrow-down.svg");
+      cursor: pointer;
+      right: -100px;
+      top: 60px;
+      z-index: 5; }
+  #last-day-program {
+    max-width: 600px; }
+  .last-day-program__wrapper .program-schedule .program-day span {
+    display: block;
+    margin-top: -5px; }
+  .moderators__wrapper .inner {
+    width: 100%;
+    text-align: center; }
+  .moderators__wrapper .inner .photo {
+    margin: 0 auto 30px auto; }
+  .contacts__wrapper {
+    flex-direction: column; }
+  .contacts__wrapper .logo-img {
+    margin-bottom: 80px; }
+  .contacts__wrapper .social-group {
+    width: 100%; }
+  .contacts__wrapper .arrow-up {
+    margin-bottom: 0;
+    margin-top: 100px; }
+  .form-error {
+    width: 400px; }
+  .program-day + .program-day {
+    margin-top: 30px; }
+  .about__registration .registration-description-wrapper .reg-for-guests {
+    width: 100%; } }
+
+@media (max-width: 834px) {
+  .header-wrapper .call-text {
+    color: white; }
+  .about__title .arrow-down-about {
+    right: 35px; }
+  .about__wrapper {
+    margin: 50px 0 50px;
+    flex-wrap: wrap; }
+  .about__wrapper .inner {
+    width: 100%; }
+  .about__wrapper .inner .subtitle {
+    margin-bottom: 10px;
+    margin-top: 25px; }
+  .qualifying-round {
+    margin: 130px auto 130px; }
+  .qualifying-round__inner .date-block {
+    width: 80%;
+    margin-top: 30px; }
+  .about__text {
+    color: black; }
+  .about__registration .registration-description-wrapper .text {
+    max-width: unset; } }
+
+@media (max-width: 700px) {
+  .description__inner .text {
+    font-size: 18px;
+    line-height: 24px; }
+  .title {
+    font-size: 24px;
+    line-height: 30px; }
+  .qualifying-round__inner .date-block {
+    font-size: 24px;
+    line-height: 30px; }
+  .about__text {
+    font-size: 18px;
+    line-height: 24px; }
+  .about__wrapper .inner .subtitle {
+    font-size: 24px;
+    line-height: 30px; }
+  .about__wrapper .inner .subtext {
+    font-size: 12px;
+    line-height: 18px; }
+  .about__registration .registration-description-wrapper {
+    font-size: 18px;
+    line-height: 24px; }
+  .about__registration .registration-form-wrapper .form .title-reg {
+    font-size: 24px;
+    line-height: 30px; }
+  .about__registration .registration-form-wrapper .form .field {
+    min-width: 290px;
+    font-size: 12px;
+    line-height: 15px;
+    min-height: 36px; }
+  .about__sponsor .title-sponsor {
+    font-size: 24px;
+    line-height: 30px; }
+  .about__sponsor .wrapper-sponsor {
+    font-size: 12px;
+    line-height: 18px; }
+  .last-day-program__wrapper .program-date .text {
+    display: none; }
+  .last-day-program__wrapper .program-date {
+    justify-content: flex-start; }
+  .last-day-program__wrapper .program-date svg {
+    width: 50%;
+    height: fit-content; }
+  .last-day-program__wrapper .program-date .month {
+    font-size: 24px;
+    line-height: 30px; }
+  .title {
+    margin-left: -30px; }
+  .description__title img {
+    width: 60%; }
+  .description__title {
+    text-align: center; }
+  .about__title .arrow-down-about {
+    right: 5px;
+    top: 0; }
+  .about__registration .registration-description-wrapper {
+    min-height: 150px; }
+  .about__registration {
+    align-items: center; }
+  .about__registration .registration-form-wrapper {
+    align-self: center; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -330px;
+    top: 30px; }
+  .last-day-program {
+    margin: 100px auto; }
+  .last-day-program__wrapper .program-schedule {
+    font-size: 24px;
+    line-height: 30px; }
+  .moderators__wrapper .inner {
+    font-size: 14px;
+    line-height: 18px; }
+    .moderators__wrapper .inner .name {
+      font-weight: bold; }
+  .moderators__wrapper {
+    margin-bottom: 30px; }
+  .last-day-program__wrapper {
+    margin-top: 50px; }
+  .about__registration .registration-form-wrapper .form .policy-wrapper {
+    max-width: 290px; } }
+
+@media (max-width: 639px) {
+  .contacts__wrapper .social-group {
+    flex-wrap: wrap; }
+  .qualifying-round {
+    margin: 75px auto; }
+  .last-day-program {
+    margin: 75px auto; }
+  .moderators__wrapper .inner {
+    min-height: 320px; }
+  .moderators__wrapper .inner .photo {
+    max-width: 200px;
+    min-height: 200px; }
+  .moderators__wrapper .inner .post {
+    max-width: 300px;
+    margin: 0 auto; }
+  .moderators__wrapper .inner .photo:hover::before {
+    max-width: 200px;
+    min-height: 200px; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -280px; } }
+
+@media (max-width: 560px) {
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -245px; } }
+
+@media (max-width: 515px) {
+  .title {
+    margin-left: -20px; }
+  .header-wrapper {
+    padding-top: 20px; }
+  .description {
+    margin-top: 50px; }
+  .qualifying-round__title {
+    margin-bottom: 20px; }
+  .qualifying-round__inner .date-block {
+    width: 100%; }
+  .qualifying-round__inner .date-block .text {
+    margin-top: 15px; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -205px; } }
+
+@media (max-width: 510px) {
+  #last-day-program {
+    font-size: 20px; }
+  .form-error {
+    width: 290px; } }
+
+@media (max-width: 500px) {
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -150px; } }
+
+@media (max-width: 414px) {
+  .about__wrapper {
+    margin: 30px 0; }
+  .about__registration .registration-form-wrapper {
+    background-color: rgba(255, 255, 255, 0.3); }
+  .about__registration .registration-form-wrapper {
+    padding: 20px 15px; }
+  .about__registration .registration-form-wrapper .form .title-reg {
+    font-size: 24px;
+    line-height: 30px;
+    max-width: 335px; }
+  .last-day-program__title {
+    font-size: 23px; }
+  .contacts__wrapper .social-group {
+    text-align: center; }
+  .contacts__wrapper .social-group a {
+    width: 25%;
+    margin-top: 15px; }
+  .contacts__wrapper .logo-img {
+    margin-bottom: 30px; }
+  .contacts__wrapper .arrow-up {
+    margin-top: 40px; }
+  .qualifying-round__inner .date-block img {
+    width: 50%; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -110px; }
+  .last-day-program__wrapper .program-date {
+    padding-top: 0; }
+  .contacts__title {
+    margin-bottom: 50px; }
+  .contacts {
+    margin-bottom: 40px; }
+  .contacts__wrapper {
+    text-align: center; }
+  .contacts__wrapper .logo-img {
+    width: 80%; } }
+
+@media (max-width: 375px) {
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -85px; }
+  .last-day-program__title {
+    font-size: 21px; }
+  .last-day-program, .qualifying-round {
+    margin: 50px auto; } }
+
+@media (max-width: 359px) {
+  #last-day-program {
+    font-size: 16px; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -55px; }
+  .about__registration .registration-description-wrapper {
+    font-size: 16px; } }
+
+@media (max-width: 320px) {
+  .description__inner .text {
+    color: white; }
+  .title {
+    margin-left: -10px; }
+  .about__sponsor .title-sponsor .arrow-down-sponsor {
+    right: -35px; } }
+
+/*# sourceMappingURL=style.css.map */
